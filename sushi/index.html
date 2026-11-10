@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>The Sushi Home – Fresh veg sushi, made to order</title>
+  <meta name="description"
+    content="Fresh vegetarian sushi handcrafted to order by Anjali in Mumbai. Authentic maki, uramaki, tempura rolls, and sushi cakes.">
+  <link rel="icon" type="image/jpeg" href="images/logo.jpg">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:title" content="The Sushi Home – Fresh veg sushi, made to order">
+  <meta property="og:description"
+    content="Handmade by Anjali in Mumbai. 100% veg cucumber, avocado, asparagus, tempura rolls & sushi cakes.">
+  <meta property="og:image" content="images/hero-sushi.jpg">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Nunito+Sans:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header>
+    <div class="wrap">
+      <a class="brand" href="#top">The Sushi Home</a>
+      <nav id="nav">
+        <a href="#menu">Menu</a>
+        <a href="#order">Order</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#terms">Terms</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero Section -->
+    <div class="hero">
+      <div class="wrap">
+        <div>
+          <h1>Fresh veg sushi, rolled to order</h1>
+          <p>Handmade by Anjali in Mumbai. Cucumber, avocado, asparagus and edamame rolls, plus sushi cakes for
+            birthdays and parties.</p>
+          <div class="row">
+            <a class="btn" href="#menu">See the menu</a>
+            <a class="btn ghost"
+              href="https://wa.me/917045371003?text=Hi%20The%20Sushi%20Home%2C%20I%E2%80%99d%20like%20to%20order."
+              target="_blank" rel="noopener">Chat on WhatsApp</a>
+          </div>
+        </div>
+        <div class="disc">
+          <img src="images/hero-sushi.jpg" alt="Avocado sushi cake with radish, edamame and nori">
+          <div class="veg"><i></i>100% veg</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Menu Section -->
+    <section id="menu">
+      <div class="wrap">
+        <h2>Menu</h2>
+        <p class="sub">Every roll is 8 pieces. Tap + to build your order, then send it on WhatsApp.</p>
+        <div class="tabs" role="tablist" id="tabs"></div>
+        <div class="list" id="list"></div>
+        <p class="note">🌶 marks the spicy rolls. Prices in rupees, delivery charges extra.</p>
+
+        <div class="cake">
+          <img src="images/cake-feature.jpg" alt="Avocado sushi cake">
+          <div>
+            <h3>Sushi cakes for your celebration</h3>
+            <p>Layers of seasoned rice, nori, cucumber and avocado. Choose a signature or avocado cake in 1 kg, ½ kg or
+              mini size.</p>
+          </div>
+        </div>
+
+        <!-- Party Boats & Gift Boxes Showcase -->
+        <div class="feature-grid">
+          <div class="feature-card">
+            <img src="images/sushi-boat.jpg" alt="24 pcs Sushi Boat Platter">
+            <div class="feature-card-body">
+              <h3>24 pcs Sushi Boat</h3>
+              <p>Grand assortment of 24 handcrafted vegetarian rolls served on an authentic wooden boat platter. Perfect
+                centerpiece for parties & gatherings.</p>
+              <div class="feature-price">₹1,800</div>
+            </div>
+          </div>
+          <div class="feature-card">
+            <img src="images/sushi-gift-box.jpg" alt="Sushi Gift Box">
+            <div class="feature-card-body">
+              <h3>Sushi Gift Boxes</h3>
+              <p>Artfully arranged luxury gift boxes with fresh assorted rolls, pickled ginger, wasabi and dips. An
+                impressive gourmet gift for any occasion.</p>
+              <div class="feature-price">12 pcs: ₹850 · 16 pcs: ₹1,400</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Order Section -->
+    <section class="order" id="order">
+      <div class="wrap">
+        <h2>Place your order</h2>
+        <p class="sub">We send your order to WhatsApp. Anjali confirms it and shares the UPI details.</p>
+        <div class="grid">
+          <form id="f" onsubmit="return false">
+            <label>
+              Your name
+              <input id="nm" name="name" autocomplete="name" placeholder="e.g. Rahul Sharma" required>
+            </label>
+            <label>
+              Delivery date
+              <input id="dt" name="date" type="date" required>
+            </label>
+            <label>
+              Area and address
+              <textarea id="ad" name="address" rows="3" placeholder="Building, area, landmark" required></textarea>
+            </label>
+            <button class="btn" id="send" type="button">Send order on WhatsApp</button>
+          </form>
+          <div>
+            <div class="sum" id="sum" aria-live="polite"></div>
+            <p class="note">Only UPI payments are accepted.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews">
+      <div class="wrap">
+        <h2>What our customers say</h2>
+        <p class="sub">Real orders, real love ❤️</p>
+
+        <div class="reviews-grid" id="reviews-grid"></div>
+
+        <div class="review-form-wrap">
+          <h3>Leave a review</h3>
+          <form id="rf" onsubmit="return false">
+            <label>
+              Your name
+              <input id="rname" placeholder="e.g. your name" autocomplete="name">
+            </label>
+            <label>
+              Your rating
+              <div class="star-pick" id="star-pick" role="group" aria-label="Rating">
+                <button type="button" data-s="1" aria-label="1 star">★</button>
+                <button type="button" data-s="2" aria-label="2 stars">★</button>
+                <button type="button" data-s="3" aria-label="3 stars">★</button>
+                <button type="button" data-s="4" aria-label="4 stars">★</button>
+                <button type="button" data-s="5" aria-label="5 stars">★</button>
+              </div>
+            </label>
+            <label>
+              Your review
+              <textarea id="rtext" rows="3" placeholder="Tell us about your experience…"></textarea>
+            </label>
+            <button class="btn" type="button" id="rsub">Submit review</button>
+            <p class="review-thanks" id="rthanks" hidden>Thank you for your review! 🎉</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews">
+      <div class="wrap">
+        <h2>What our customers say</h2>
+        <p class="sub">Real orders, real love ❤️</p>
+
+        <div class="reviews-grid" id="reviews-grid"></div>
+
+        <div class="review-form-wrap">
+          <h3>Leave a review</h3>
+          <form id="rf" onsubmit="return false">
+            <label>
+              Your name
+              <input id="rname" placeholder="e.g. Priya Shah" autocomplete="name">
+            </label>
+            <label>
+              Your rating
+              <div class="star-pick" id="star-pick" role="group" aria-label="Rating">
+                <button type="button" data-s="1" aria-label="1 star">★</button>
+                <button type="button" data-s="2" aria-label="2 stars">★</button>
+                <button type="button" data-s="3" aria-label="3 stars">★</button>
+                <button type="button" data-s="4" aria-label="4 stars">★</button>
+                <button type="button" data-s="5" aria-label="5 stars">★</button>
+              </div>
+            </label>
+            <label>
+              Your review
+              <textarea id="rtext" rows="3" placeholder="Tell us about your experience…"></textarea>
+            </label>
+            <button class="btn" type="button" id="rsub">Submit review</button>
+            <p class="review-thanks" id="rthanks" hidden>Thank you for your review! 🎉</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Terms Section -->
+    <section id="terms">
+      <div class="wrap">
+        <h2>Before you order</h2>
+        <p class="sub">A few things that help us deliver on time.</p>
+        <ul class="terms">
+          <li>Place your order 1 day in advance so we can accommodate your requirements.</li>
+          <li>Only UPI payments are accepted.</li>
+          <li>Once an order is placed, it cannot be cancelled on the day of delivery.</li>
+          <li>All items are made fresh.</li>
+          <li>Delivery time may vary depending on traffic or weather conditions.</li>
+          <li>Offers and discounts are valid for a limited period.</li>
+          <li>Delivery charges are applicable.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div style="display:flex;gap:16px;align-items:center">
+        <img src="images/logo.jpg" alt="The Sushi Home logo">
+        <div><strong>The Sushi Home</strong><br>by Anjali, Mumbai</div>
+      </div>
+      <div>
+        Call or WhatsApp: <a href="tel:+917045371003">+91 70453 71003</a><br>
+        Instagram: <a href="https://instagram.com/the_sushi_home" target="_blank" rel="noopener">@the_sushi_home</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Sticky Bottom Order Summary Bar -->
+  <div class="bar" id="bar">
+    <div><strong id="bc"></strong></div>
+    <a class="btn" href="#order">Review order</a>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
