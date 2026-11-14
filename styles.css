@@ -831,6 +831,24 @@ footer img {
   section { padding: 40px 0; }
   .item { gap: 10px; }
   .item .thumb { width: 56px; height: 56px; }
+  .item.has-thumb {
+    display: grid;
+    grid-template-columns: 56px minmax(0, 1fr) auto;
+    gap: 8px 10px;
+  }
+  .item.has-thumb .thumb { grid-column: 1; grid-row: 1; }
+  .item.has-thumb .n {
+    grid-column: 2;
+    grid-row: 1;
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+  .item.has-thumb .price { grid-column: 3; grid-row: 1; }
+  .item.has-thumb .qty {
+    grid-column: 2 / 4;
+    grid-row: 2;
+    justify-self: end;
+  }
   .btn { padding: 11px 20px; font-size: 15px; }
   .tab { padding: 7px 14px; font-size: 14px; }
 }

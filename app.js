@@ -133,7 +133,7 @@ function list() {
     const key = cur + i;
     const quantity = q[key] || 0;
     const imgHtml = img ? `<img class="thumb" src="${img}" alt="${n}" loading="lazy">` : '';
-    return `<div class="item">
+    return `<div class="item${img ? " has-thumb" : ""}">
       ${imgHtml}
       <div class="n">${n}${d ? `<small>${d}</small>` : ""}</div>
       <div class="price">${R(p)}</div>
