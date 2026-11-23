@@ -152,12 +152,12 @@ footer img{width:90px;border-radius:10px}
 <div>Call or WhatsApp: <a href="tel:+917045371003">+91 70453 71003</a><br>Instagram: <a href="https://instagram.com/the_sushi_home" target="_blank" rel="noopener">@the_sushi_home</a></div></div></footer>
 <div class="bar" id="bar"><div><strong id="bc"></strong></div><a class="btn" href="#order">Review order</a></div>
 <script>
-const M={"Maki":[["Kappa Maki",430,"Cucumber roll"],["Spicy Maki 🌶",430],["Edamame Maki",430],["Veggie Maki",430],["Asparagus Maki",430],["Kappa Avocado Maki",430]],
-"Uramaki":[["Classic Cucumber",430],["California Roll",430],["Summer Roll",430],["Avocado Roll",430],["Veggie Supreme",430],["Spicy Avocado 🌶",430],["Asparagus Cream Cheese Roll",430],["Avocado Asparagus Roll",430]],
-"Tempura":[["Japanese Spice Roll",430],["TSC Signature Roll",430],["Avocado Blast",480],["Crunchy Edamame Roll",430],["Asparagus Tempura Roll",430],["Assorted Veggies Tempura Roll",430],["Baby Corn Tempura Roll",430],["Rock Corn Tempura Roll",430]],
+const M={"Maki Sushi Roll":[["Kappa Maki",430,"Cucumber roll"],["Spicy Maki 🌶",430],["Edamame Maki",430],["Veggie Maki",430],["Asparagus Maki",430],["Kappa Avocado Maki",430]],
+"Uramaki Sushi Roll":[["Classic Cucumber",430],["California Roll",430],["Summer Roll",430],["Avocado Roll",430],["Veggie Supreme",430],["Spicy Avocado 🌶",430],["Asparagus Cream Cheese Roll",430],["Avocado Asparagus Roll",430]],
+"Tempura Sushi Roll":[["Japanese Spice Roll",430],["TSC Signature Roll",430],["Avocado Blast",480],["Crunchy Edamame Roll",430],["Asparagus Tempura Roll",430],["Assorted Veggies Tempura Roll",430],["Baby Corn Tempura Roll",430],["Rock Corn Tempura Roll",430]],
 "Boats & Gift Boxes":[["24 pcs Sushi Boat",1800,"24 pcs signature veg assortment on a boat platter","images/sushi-boat.jpg"],["12 pcs Sushi Gift Box",850,"12 pcs handcrafted veg sushi in a gift box","images/sushi-gift-box.jpg"],["16 pcs Sushi Gift Box",1400,"16 pcs luxury veg sushi assortment in a gift box","images/sushi-gift-box.jpg"]],
 "Cakes & more":[["1 kg Signature Sushi Cake",1800],["1 kg Avocado Sushi Cake",2000],["½ kg Signature Sushi Cake",1000],["½ kg Avocado Sushi Cake",1200],["Mini Sushi Cake",700],["Sushi Bowl",500],["Edamame Starter",400]]};
-const q={};let cur="Maki";
+const q={};let cur="Maki Sushi Roll";
 const $=id=>document.getElementById(id),R=n=>"₹"+n.toLocaleString("en-IN");
 function tabs(){$("tabs").innerHTML=Object.keys(M).map(k=>`<button class="tab" role="tab" aria-selected="${k==cur}" data-k="${k}">${k}</button>`).join("")}
 function list(){$("list").innerHTML=M[cur].map(([n,p,d,img],i)=>{const key=cur+i;const im=img?`<img class="thumb" src="${img}" alt="${n}" loading="lazy">`:"";return `<div class="item">${im}<div class="n">${n}${d?`<small>${d}</small>`:""}</div><div class="price">${R(p)}</div><div class="qty"><button aria-label="Remove one ${n}" data-d="-1" data-k="${key}">−</button><span>${q[key]||0}</span><button aria-label="Add one ${n}" data-d="1" data-k="${key}">+</button></div></div>`}).join("")}

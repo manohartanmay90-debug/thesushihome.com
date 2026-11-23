@@ -1,6 +1,6 @@
 // Menu Data
 const M = {
-  "Maki": [
+  "Maki Sushi Roll": [
     ["Kappa Maki", 430, "Cucumber roll"],
     ["Spicy Maki 🌶", 430],
     ["Edamame Maki", 430],
@@ -8,7 +8,7 @@ const M = {
     ["Asparagus Maki", 430],
     ["Kappa Avocado Maki", 430]
   ],
-  "Uramaki": [
+  "Uramaki Sushi Roll": [
     ["Classic Cucumber", 430],
     ["California Roll", 430],
     ["Summer Roll", 430],
@@ -18,7 +18,7 @@ const M = {
     ["Asparagus Cream Cheese Roll", 430],
     ["Avocado Asparagus Roll", 430]
   ],
-  "Tempura": [
+  "Tempura Sushi Roll": [
     ["Japanese Spice Roll", 430],
     ["TSC Signature Roll", 430],
     ["Avocado Blast", 480],
@@ -53,7 +53,7 @@ const M = {
 
 // Cart state: key -> quantity
 const q = {};
-let cur = "Maki";
+let cur = "Maki Sushi Roll";
 const VISITOR_ID_KEY = "tsh_visitor_id";
 
 // Helper utilities
