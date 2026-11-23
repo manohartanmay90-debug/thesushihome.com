@@ -28,6 +28,13 @@ const M = {
     ["Baby Corn Tempura Roll", 430],
     ["Rock Corn Tempura Roll", 430]
   ],
+  "Sushi Cups": [
+    ["California Sushi Cups", 750, "6 cups · Avocado, cucumber, jalapeño and cream cheese"],
+    ["Rock Corn Tempura Cups", 750, "6 cups · Corn, bell peppers and spicy sauce"],
+    ["Asparagus Tempura Cups", 750, "6 cups · Asparagus, bell pepper and wasabi cream cheese"],
+    ["Edamame Veggie Cups", 750, "6 cups · Edamame, zucchini, bell peppers and blue rice"],
+    ["Signature Sushi Cups", 770, "6 cups · Avocado, bell peppers, cucumber and edamame"]
+  ],
   "Boats & Gift Boxes": [
     ["24 pcs Sushi Boat", 1800, "24 pcs signature veg assortment on a wooden boat platter", "images/sushi-boat.jpg"],
     ["12 pcs Sushi Gift Box", 850, "12 pcs handcrafted veg sushi in an elegant gift box", "images/sushi-gift-box.jpg"],
